@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="button_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:background">@color/blue</item>
+    </style>
+
+    <style name="BlueTextStyle">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BlueTexts">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="pageThreeStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <style name="CustomCalendarDateTextAppearance">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+    </style>
+</resources>

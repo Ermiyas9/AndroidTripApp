@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shortcut for activityHomepage -->
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/airplane"
+        android:shortcutId="shortcutHomepage"
+        android:shortcutLongLabel="@string/open_homepage_label"
+        android:shortcutShortLabel="@string/shortCutHomePage">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.tripplannerapp"
+            android:targetClass="com.example.tripplannerapp.activityHomepage" />
+    </shortcut>
+
+</shortcuts>

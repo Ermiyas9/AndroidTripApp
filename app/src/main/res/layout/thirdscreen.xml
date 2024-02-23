@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/start_date_text_view"
+            style="@style/pageThreeStyle"
+            android:layout_width="346dp"
+            android:layout_height="74dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="39dp"
+            android:hint="@string/enterExtra5"
+            android:text="@string/start_date"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/destination_text_view"
+            style="@style/pageThreeStyle"
+            android:layout_width="342dp"
+            android:layout_height="71dp"
+            android:layout_below="@id/start_date_text_view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="42dp"
+            android:hint="@string/enterHere"
+            android:text="@string/destination"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numberOfPersons"
+            style="@style/pageThreeStyle"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/endDate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="29dp"
+            android:hint="@string/enter_your_text_here"
+            android:text="@string/number_of_travelers"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_price"
+            style="@style/pageThreeStyle"
+            android:layout_width="351dp"
+            android:layout_height="67dp"
+            android:layout_below="@id/numberOfPersons"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="126dp"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/enterText"
+            android:text="@string/total_price"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/endDate"
+            style="@style/pageThreeStyle"
+            android:layout_width="346dp"
+            android:layout_height="97dp"
+            android:layout_below="@id/start_date_text_view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="31dp"
+            android:hint="@string/enterText1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="Autofill,TextFields" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/pageThreeStyle"
+            android:layout_width="354dp"
+            android:layout_height="71dp"
+            android:layout_below="@id/numberOfPersons"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="26dp"
+            android:hint="@string/enterText2"
+            android:text="@string/price_night"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/confirm_button"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_price"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="94dp"
+            android:layout_marginEnd="239dp"
+            android:text="@string/confirm" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/button_style"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="78dp"
+            android:text="@string/cancel" />
+
+        <Switch
+            android:id="@+id/reviewSwitch"
+            android:layout_width="194dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/total_price"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="106dp"
+            android:layout_marginBottom="61dp"
+            android:text="@string/review_fare"
+            android:trackTint="@color/black" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

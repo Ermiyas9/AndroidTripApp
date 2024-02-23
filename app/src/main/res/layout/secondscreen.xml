@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:background="@color/teal_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioButton
+        android:id="@+id/RadioBtnTokyo"
+        style="@style/BlueTexts"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="60dp"
+        android:button="@drawable/custom_radio_button"
+        android:text="@string/japanTokyo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioButton
+        android:id="@+id/RadioBtnEngland"
+        style="@style/BlueTexts"
+        android:layout_width="184dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:button="@drawable/custom_radio_button"
+        android:text="@string/manchesterEngland"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/explore_page_button1"
+        style="@style/button_style"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginEnd="256dp"
+        android:text="@string/PREV"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewExploreMsg" />
+
+    <ImageView
+        android:id="@+id/new_york_location"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="356dp"
+        android:layout_marginBottom="104dp"
+        android:contentDescription="@string/nwyrk_location"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/tokyo_price"
+        style="@style/BlueTexts"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="104dp"
+        android:text="@string/tokyo_price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tokyo_location"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="209dp" />
+
+    <ImageView
+        android:id="@+id/tokyo_location"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="@string/tokyo_location"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/BlueTexts"
+        android:layout_width="117dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/price1"
+        app:layout_constraintStart_toEndOf="@+id/new_york_location"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="172dp"
+        android:layout_height="183dp"
+        android:layout_marginBottom="152dp"
+        android:contentDescription="@string/tokyo_pic_descr"
+        android:scaleType="fitXY"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/picofcity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/txtViewExploreMsg"
+        android:layout_width="368dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="758dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/textview1"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="178dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/nwyrk_pic_descr"
+        android:scaleType="fitXY"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/highway"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioBtnEngland" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-14dp" />
+
+
+    <TextView
+        android:id="@+id/textView15"
+        style="@style/BlueTexts"
+        android:layout_width="235dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="168dp"
+        android:text="@string/numOfTravelers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewExploreMsg"
+        tools:ignore="TextSizeCheck" />
+
+    <Spinner
+        android:id="@+id/list"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:entries="@array/list"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        style="@style/BlueTexts"
+        android:layout_width="180dp"
+        android:layout_height="304dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        android:dateTextAppearance="@style/CustomCalendarDateTextAppearance"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="181dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/lake_pic_descr"
+        android:scaleType="fitXY"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/nature"
+        app:layout_constraintBottom_toTopOf="@id/imageView32"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:contentDescription="@string/london_location"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toTopOf="@id/imageView32"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_price"
+        style="@style/BlueTexts"
+        android:layout_width="88dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/price"
+        app:layout_constraintBottom_toTopOf="@id/imageView6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/explore_next_button2"
+        style="@style/button_style"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="684dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/next_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewExploreMsg"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <RadioButton
+        android:id="@+id/RadioBtnNewYork"
+        style="@style/BlueTexts"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="8dp"
+        android:button="@drawable/custom_radio_button"
+        android:text="@string/newYorkCity"
+        app:layout_constraintBottom_toTopOf="@+id/explore_page_button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

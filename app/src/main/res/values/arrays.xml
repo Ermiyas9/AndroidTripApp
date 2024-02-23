@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item><style name="BlueTexts">Single Person 1</style></item>
+        <item><style name="BlueTexts">Group of 2</style></item>
+        <item><style name="BlueTexts">Group of 3</style></item>
+        <item><style name="BlueTexts">Group of 4</style></item>
+        <item><style name="BlueTexts">Group of 5 People Maximum</style></item>
+    </string-array>
+</resources>

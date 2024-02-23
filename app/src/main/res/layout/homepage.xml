@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/homepage_scene">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/londonnature"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-54dp" />
+
+    <TextView
+        android:id="@+id/txtViewDisplayMsg"
+        style="@style/BlueTextStyle"
+        android:layout_width="346dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginBottom="208dp"
+        android:text="@string/textview_homepage"
+        app:layout_constraintBottom_toTopOf="@+id/home_page_button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_page_button2" />
+
+    <Button
+        android:id="@+id/home_page_button1"
+        style="@style/button_style"
+        android:layout_width="227dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/get_started_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/home_page_button2"
+        style="@style/button_style"
+        android:layout_width="183dp"
+        android:layout_height="57dp"
+        android:text="@string/explore_our_new_deal"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewDisplayMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
