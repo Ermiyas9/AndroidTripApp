@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/teal_200">
+
+    <!-- Container for RecyclerView and other views -->
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/backButton">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodName"
+            style="@style/BlueTexts"
+            tools:text= "Name Of the Food:"
+            android:layout_toEndOf="@id/foodImage"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mealCategories"
+            style="@style/BlueTexts"
+            tools:text= "Meal Category:"
+            android:layout_toEndOf="@id/foodImage"
+            android:layout_below="@+id/foodName"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodPrice"
+            style="@style/BlueTexts"
+            tools:text= "The Price Of the Food:"
+            android:layout_toEndOf="@id/foodImage"
+            android:layout_below="@+id/mealCategories"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodDescription"
+            style="@style/BlueTexts"
+            tools:text= "The Description Of the Food:"
+            android:layout_toEndOf="@id/foodImage"
+            android:layout_below="@+id/foodPrice"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/preparationTime"
+            style="@style/BlueTexts"
+            tools:text= "Preparation Time:"
+            android:layout_toEndOf="@id/foodImage"
+            android:layout_below="@+id/foodDescription"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/foodImage"
+            android:layout_marginTop="10dp"
+            android:background="@color/teal_200"/>
+</RelativeLayout>
+
+    <!-- Button for going back -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Back"
+        android:onClick="goBack" />
+</RelativeLayout>
+
+
+

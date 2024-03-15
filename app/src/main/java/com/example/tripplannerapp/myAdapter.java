@@ -2,23 +2,28 @@ package com.example.tripplannerapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
 
-    Context context;
-    public List<Items> itemList;
+    private final  RecyclerViewInterface recyclerViewInterface;
 
-    public myAdapter(Context context, List<Items> itemList) {
+    Context context;
+    ArrayList<Items> itemList;
+
+    public myAdapter(Context context, ArrayList<Items> itemList,  RecyclerViewInterface recyclerViewInterface) {
         this.context = context;
         this.itemList = itemList;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     /**
@@ -44,7 +49,10 @@ public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new myViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view,parent,false));
+        // Inflate the item layout
+        View itemView = LayoutInflater.from(context).inflate(R.layout.item_view, parent, false);
+        // Create a new instance of myViewHolder with the RecyclerViewInterface parameter
+        return new myViewHolder(itemView, recyclerViewInterface);
     }
 
     /**
