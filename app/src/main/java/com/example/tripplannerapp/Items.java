@@ -4,12 +4,12 @@ public class Items {
 
     String foodName;
     String mealCategories;
-    int foodPrice;
+    double foodPrice;
     String foodDescription;
-    String foodImage;
-    int preparationTimeMinutes;
+    int foodImage;
+    double preparationTimeMinutes;
 
-    public Items(String foodName, String mealCategories, int foodPrice, String foodDescription, String foodImage, int preparationTimeMinutes) {
+    public Items(String foodName, String mealCategories, double foodPrice, String foodDescription, int foodImage, double preparationTimeMinutes) {
         this.foodName = foodName;
         this.mealCategories = mealCategories;
         this.foodPrice = foodPrice;
@@ -34,11 +34,11 @@ public class Items {
         this.mealCategories = mealCategories;
     }
 
-    public int getFoodPrice() {
+    public double getFoodPrice() {
         return foodPrice;
     }
 
-    public void setFoodPrice(int foodPrice) {
+    public void setFoodPrice(double foodPrice) {
         this.foodPrice = foodPrice;
     }
 
@@ -50,19 +50,19 @@ public class Items {
         this.foodDescription = foodDescription;
     }
 
-    public String getFoodImage() {
+    public int getFoodImage() {
         return foodImage;
     }
 
-    public void setFoodImage(String foodImage) {
+    public void setFoodImage(int foodImage) {
         this.foodImage = foodImage;
     }
 
-    public int getPreparationTimeMinutes() {
+    public double getPreparationTimeMinutes() {
         return preparationTimeMinutes;
     }
 
-    public void setPreparationTimeMinutes(int preparationTimeMinutes) {
+    public void setPreparationTimeMinutes(double preparationTimeMinutes) {
         this.preparationTimeMinutes = preparationTimeMinutes;
     }
 }
