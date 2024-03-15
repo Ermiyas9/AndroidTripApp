@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/foodImage"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodName"
+        style="@style/BlueTexts"
+        tools:text= "Name Of the Food:"
+        android:layout_toEndOf="@id/foodImage"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mealCategories"
+        style="@style/BlueTexts"
+        tools:text= "Meal Category:"
+        android:layout_toEndOf="@id/foodImage"
+        android:layout_below="@+id/foodName"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodPrice"
+        style="@style/BlueTexts"
+        tools:text= "The Price Of the Food:"
+        android:layout_toEndOf="@id/foodImage"
+        android:layout_below="@+id/mealCategories"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodDescription"
+        style="@style/BlueTexts"
+        tools:text= "The Description Of the Food:"
+        android:layout_toEndOf="@id/foodImage"
+        android:layout_below="@+id/foodPrice"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/preparationTimeMinutes"
+        style="@style/BlueTexts"
+        tools:text= "Preparation Time:"
+        android:layout_toEndOf="@id/foodImage"
+        android:layout_below="@+id/foodDescription"/>
+
+
+</RelativeLayout>
+
