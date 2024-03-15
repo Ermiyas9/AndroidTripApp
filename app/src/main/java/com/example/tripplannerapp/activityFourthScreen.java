@@ -14,9 +14,16 @@
 
 // import for the last page
 package com.example.tripplannerapp;
+
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Toast;
+import android.content.Intent;
+
+
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -47,6 +54,19 @@ public class  activityFourthScreen extends AppCompatActivity {
             } else {
                 Toast.makeText(activityFourthScreen.this, "Thank you for your feedback! We're glad you enjoyed your trip.", Toast.LENGTH_LONG).show();
             }
+        });
+
+        // Find the button
+        Button button = findViewById(R.id.foodMenuButton);
+
+        // Set a click listener for the button
+        button.setOnClickListener(view -> {
+
+            // Create an intent to start the desired activity
+            Intent intent = new Intent(activityFourthScreen.this, foodMenuRecycleView.class);
+
+            // Start the activity
+            startActivity(intent);
         });
     }
 }

@@ -55,4 +55,7 @@
     <string name="newYorkCity">New York City</string>
     <string name="japanTokyo">Japan, Tokyo</string>
     <string name="next_">NEXT</string>
+    <string name="Kitfo">Kitfo is a classic Ethiopian dish made from finely minced raw beef, seasoned with spices, and served with traditional sides like injera and cottage cheese</string>
+    <string name="pakoraDescription">Pakora is a crispy Indian snack made by frying vegetables or meat coated in seasoned chickpea flour batter</string>
+    <string name="sushiDescription">Sushi is a popular Japanese dish consisting of vinegar rice topped or rolled with various ingredients such as raw fish, seafood, vegetables, or egg</string>
 </resources>
