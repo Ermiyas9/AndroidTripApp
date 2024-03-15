@@ -7,4 +7,17 @@
         <item><style name="BlueTexts">Group of 4</style></item>
         <item><style name="BlueTexts">Group of 5 People Maximum</style></item>
     </string-array>
+
+    <string-array name="listOfDestination">
+        <item><style name="BlueTexts">Ethiopia</style></item>
+        <item><style name="BlueTexts">Canada</style></item>
+        <item><style name="BlueTexts">Kuwait</style></item>
+        <item><style name="BlueTexts">England</style></item>
+        <item><style name="BlueTexts">India</style></item>
+        <item><style name="BlueTexts">Kenya</style></item>
+        <item><style name="BlueTexts">Japan</style></item>
+        <item><style name="BlueTexts">South Africa</style></item>
+        <item><style name="BlueTexts">Brazil</style></item>
+        <item><style name="BlueTexts">France</style></item>
+    </string-array>
 </resources>
