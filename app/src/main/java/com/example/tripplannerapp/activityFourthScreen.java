@@ -8,7 +8,7 @@
 /**						: and handles button clicks to navigate users to the second screen  	    */
 /**						: of the app. The class uses intents to start the corresponding activities  */
 /**                     : in addition it passes data to the next activity in order to calculate     */
-/**                     : the fare of the trip any related datas                                    */
+/**                     : the fare of the trip any related data's                                    */
 /**=================================================================================================*/
 
 
@@ -32,7 +32,6 @@ public class  activityFourthScreen extends AppCompatActivity {
     /**
      * Called when the activity is first created. Responsible for initializing the activity,
      * setting its layout, and configuring the RatingBar with properties and a listener for rating changes.
-     *
      * param savedInstanceState A Bundle containing the activity's previously saved state, or null if there was none.
      */
     @Override

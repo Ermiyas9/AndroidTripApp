@@ -17,7 +17,7 @@ public class foodMenuRecycleView extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.foodItemLists);
 
-        List<Items> itemsList = new ArrayList<Items>();
+        List<Items> itemsList = new ArrayList<>();
 
         itemsList.add(new Items("Kitfo","Lunch",25.00,"\n" +
                 getString(R.string.Kitfo),R.drawable.kitfo_image, 16.00));
@@ -29,7 +29,7 @@ public class foodMenuRecycleView extends AppCompatActivity {
                 ,R.drawable.japanese_food, 23.00));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new myAdapter(getApplicationContext(),itemsList));
+        recyclerView.setAdapter(new myAdapter(this,itemsList));
 
     }
 }

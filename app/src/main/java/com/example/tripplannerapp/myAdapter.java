@@ -14,7 +14,7 @@ import java.util.List;
 public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
 
     Context context;
-    List<Items> itemList;
+    public List<Items> itemList;
 
     public myAdapter(Context context, List<Items> itemList) {
         this.context = context;
@@ -69,12 +69,12 @@ public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
      */
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
-        holder.foodNameTextView.setText(itemList.get(position). getFoodName());
+        holder.foodNameTextView.setText(itemList.get(position).getFoodName());
         holder.foodDescriptionTextView.setText(itemList.get(position).getFoodDescription());
         holder.mealCategoriesTextView.setText(itemList.get(position).getMealCategories());
-        holder.foodPriceTextView.setText((int)itemList.get(position).getFoodPrice());
+        holder.foodPriceTextView.setText(String.valueOf(itemList.get(position).getFoodPrice()));
         holder.foodImageView.setImageResource(itemList.get(position).getFoodImage());
-        holder.preparationTimeTextView.setText((int) itemList.get(position).getPreparationTimeMinutes());
+        holder.preparationTimeTextView.setText(String.valueOf(itemList.get(position).getPreparationTimeMinutes()));
     }
 
     /**
