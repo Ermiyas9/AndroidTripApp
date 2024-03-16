@@ -22,7 +22,7 @@ public class miniScreen extends AppCompatActivity {
         double foodPrice = getIntent().getDoubleExtra("foodPrice", 0.0);
         String foodDescription = getIntent().getStringExtra("foodDescription");
         int foodImage = getIntent().getIntExtra("foodImage", 0);
-        double preparationTime = getIntent().getDoubleExtra("preparationTimeMinutes", 0.0); 
+        double preparationTime = getIntent().getDoubleExtra("preparationTimeMinutes", 0.0);
 
 
         ImageView foodImageView = findViewById(R.id.foodImage);
