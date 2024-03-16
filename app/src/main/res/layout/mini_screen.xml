@@ -57,6 +57,11 @@
             android:layout_toEndOf="@id/foodImage"
             android:layout_below="@+id/foodDescription"/>
 
+        <TextView
+            android:id="@+id/downloadedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"

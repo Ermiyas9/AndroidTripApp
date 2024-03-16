@@ -11,12 +11,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 public class miniScreen extends AppCompatActivity {
@@ -61,7 +65,7 @@ public class miniScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Execute the DownloadFileTask when the download button is clicked
-                new DownloadFileTask().execute("https://example.com/downloadFile.txt");
+                new DownloadFileTask().execute("https://filesamples.com/samples/document/txt/sample3.txt");
             }
         });
     }
@@ -110,11 +114,34 @@ public class miniScreen extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
 
-            // This method is executed after the file is downloaded and saved
+            // method will executed after the file is downloaded and saved
             Log.d("DownloadFileTask", "File downloaded successfully");
 
             // Display a toast message to notify the user
-            Toast.makeText( miniScreen.this, "File downloaded successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(miniScreen.this, "File downloaded successfully", Toast.LENGTH_SHORT).show();
+
+            // Read the downloaded file and its content to pass to the new activity
+            StringBuilder sb = new StringBuilder();
+            try {
+                FileInputStream fis = openFileInput(FILENAME);
+                InputStreamReader isr = new InputStreamReader(fis);
+                BufferedReader br = new BufferedReader(isr);
+                String line;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line).append("\n");
+                }
+                br.close();
+                isr.close();
+                fis.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Create an Intent to start the new activity and pass the file content
+            Intent intent = new Intent(miniScreen.this, displayDownloadedFile.class);
+            intent.putExtra("fileContent", sb.toString());
+            startActivity(intent);
         }
+
     }
 }
