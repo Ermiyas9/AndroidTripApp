@@ -1,20 +1,37 @@
 package com.example.tripplannerapp;
 
+// Imports
+
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+
 public class miniScreen extends AppCompatActivity {
 
+    // Name of the file to save the downloaded content
+    private static final String FILENAME = "downloadedFile.txt";
     @Override
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.mini_screen);
+
+        // Find the download button by its ID
+        Button downloadButton = findViewById(R.id.downloadButton);
 
 
         String foodName = getIntent().getStringExtra("foodName");
@@ -38,9 +55,66 @@ public class miniScreen extends AppCompatActivity {
         mealCategoriesTextView.setText(foodDescription);
         foodPriceTextView.setText(String.valueOf(foodPrice));
         foodDescriptionTextView.setText(foodDescription);
+
+        // Set up OnClickListener for the download button
+        downloadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Execute the DownloadFileTask when the download button is clicked
+                new DownloadFileTask().execute("https://example.com/downloadFile.txt");
+            }
+        });
     }
 
     public void goBack(View view) {
         finish();
+    }
+
+
+    /**
+     * DownloadFileTask is an AsyncTask that downloads a file from a given URL
+     * and saves it to the internal storage of the device.
+     */
+    private class DownloadFileTask extends AsyncTask<String, Void, Void> {
+        @Override
+        protected Void doInBackground(String... params) {
+            try {
+                // Get the URL
+                URL url = new URL(params[0]);
+
+                // Get the input stream from the URL
+                InputStream in = url.openStream();
+
+                // Get the output stream to write the downloaded data to the file
+                FileOutputStream out = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+
+                // Read data from the input stream and write it to the output stream
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = in.read(buffer)) != -1) {
+                    out.write(buffer, 0, bytesRead);
+                }
+
+                // Close streams
+                out.close();
+                in.close();
+
+            } catch (IOException e) {
+                // Handle IO exceptions, e.g., network issues, file writing errors
+                Log.e("DownloadFileTask", "Error downloading file: " + e.getMessage());
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+
+            // This method is executed after the file is downloaded and saved
+            Log.d("DownloadFileTask", "File downloaded successfully");
+
+            // Display a toast message to notify the user
+            Toast.makeText( miniScreen.this, "File downloaded successfully", Toast.LENGTH_SHORT).show();
+        }
     }
 }
