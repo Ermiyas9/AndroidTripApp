@@ -1,6 +1,6 @@
 /** ================================================================================================*/
 /** FILE				: activityHomepage.java													    */
-/** PROJECT				: Assignment 1                                                              */
+/** PROJECT            : Trip Planner App (Assignment 2)                                            */
 /** PROGRAMMER			: Ermiyas (Endalkachew) Gulti											    */
 /** FIRST VERSION		: 2024-02-14	                     								        */
 /** DESCRIPTION			: activityHomepage.java is a class that represents the homepage             */

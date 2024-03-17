@@ -1,7 +1,16 @@
+/** ================================================================================================*/
+/** FILE               : miniScreen.java                                                            */
+/** PROJECT            : Trip Planner App (Assignment 2)                                            */
+/** PROGRAMMER         : Ermiyas (Endalkachew) Gulti                                                */
+/** FIRST VERSION      : 2024-March-14                                                              */
+/** DESCRIPTION        : Represents the mini screen activity where details of a food item are       */
+/**                     : displayed. Allows users to download a file asynchronously and navigate   */
+/**                     : to another activity to display the downloaded file.                      */
+/**=================================================================================================*/
+
 package com.example.tripplannerapp;
 
 // Imports
-
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,12 +42,10 @@ public class miniScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.mini_screen);
 
         // Find the download button by its ID
         Button downloadButton = findViewById(R.id.downloadButton);
-
 
         String foodName = getIntent().getStringExtra("foodName");
         String mealCategory = getIntent().getStringExtra("mealCategories");
@@ -46,7 +53,6 @@ public class miniScreen extends AppCompatActivity {
         String foodDescription = getIntent().getStringExtra("foodDescription");
         int foodImage = getIntent().getIntExtra("foodImage", 0);
         double preparationTime = getIntent().getDoubleExtra("preparationTimeMinutes", 0.0);
-
 
         ImageView foodImageView = findViewById(R.id.foodImage);
         TextView preparationTimeTextView = findViewById(R.id.preparationTime);
@@ -69,7 +75,6 @@ public class miniScreen extends AppCompatActivity {
                 // Execute the DownloadFileTask when the download button is clicked
                 new DownloadFileTask().execute("https://filesamples.com/samples/document/txt/sample3.txt");
 
-
                 // Create an intent to start the second database activity
                 Intent intent2 = new Intent(miniScreen.this, activityDatabaseRecord.class);
 
@@ -79,10 +84,14 @@ public class miniScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Handles the back button click event.
+     *
+     * @param view The View object that was clicked.
+     */
     public void goBack(View view) {
         finish();
     }
-
 
     /**
      * DownloadFileTask is an AsyncTask that downloads a file from a given URL
@@ -120,6 +129,13 @@ public class miniScreen extends AppCompatActivity {
             return null;
         }
 
+        /**
+         * This method is called after the file is downloaded and saved.
+         * It logs a success message, displays a toast to notify the user about the successful download,
+         * reads the downloaded file's content, and passes it to a new activity to display.
+         *
+         * @param result The result of the AsyncTask execution.
+         */
         @Override
         protected void onPostExecute(Void result) {
 
@@ -151,6 +167,5 @@ public class miniScreen extends AppCompatActivity {
             intent.putExtra("fileContent", sb.toString());
             startActivity(intent);
         }
-
     }
 }

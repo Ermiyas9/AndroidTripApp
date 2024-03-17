@@ -1,25 +1,42 @@
+/** ================================================================================================*/
+/** FILE               : myAdapter.java                                                            */
+/** PROJECT            : Trip Planner App (Assignment 2)                                            */
+/** PROGRAMMER         : Ermiyas (Endalkachew) Gulti                                                */
+/** FIRST VERSION      : 2024-March-14                                                              */
+/** DESCRIPTION        : This file contains the implementation of the RecyclerView adapter used     */
+/**                    : in the Trip Planner app. The adapter is responsible for binding data to    */
+/**                    : the RecyclerView and creating ViewHolders as needed.It uses custom interface,*/
+/**                    : RecyclerViewInterface, to handle interactions with RecyclerView items.     */
+/**=================================================================================================*/
+
 package com.example.tripplannerapp;
 
+// imports
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Adapter class for populating a RecyclerView with items representing food items in the Trip Planner app.
+ */
 public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
-
     private final  RecyclerViewInterface recyclerViewInterface;
-
     Context context;
     ArrayList<Items> itemList;
 
+    /**
+     * Constructor for myAdapter.
+     *
+     * @param context               The context in which the adapter is being used.
+     * @param itemList              The list of items to be displayed in the RecyclerView.
+     * @param recyclerViewInterface The interface for handling RecyclerView item interactions.
+     */
     public myAdapter(Context context, ArrayList<Items> itemList,  RecyclerViewInterface recyclerViewInterface) {
         this.context = context;
         this.itemList = itemList;

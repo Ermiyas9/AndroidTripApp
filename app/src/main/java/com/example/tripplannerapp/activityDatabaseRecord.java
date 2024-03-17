@@ -1,3 +1,13 @@
+/*
+ * FILE                 : activityDatabaseRecord.java
+ * PROJECT              : Trip Planner App (Assignment 2)
+ * PROGRAMMER           : Ermiyas (Endalkachew) Gulti
+ * FIRST VERSION        : 2024-March-14
+ * DESCRIPTION          : This file contains the implementation of the activity responsible for interacting with the database in the Trip Planner app.
+ *                      : It allows users to add data to the database and view existing data.
+ */
+
+
 package com.example.tripplannerapp;
 
 import android.database.Cursor;
@@ -23,8 +33,13 @@ public class activityDatabaseRecord extends AppCompatActivity {
     String destination;
     String totalPrice;
     String foodPrice;
-
-
+    
+    /**
+     * Called when the activity is first created.
+     * Initializes UI components, retrieves extras from the intent,
+     * and sets up the database helper.
+     * @param savedInstanceState The saved instance state Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +53,7 @@ public class activityDatabaseRecord extends AppCompatActivity {
         // instance for our database helper class
         myDataBase = new DatabaseHelper(this);
 
+        // casting the edit text view and the button
         editFirstName = (EditText) findViewById(R.id.firstName);
         editLastName = (EditText) findViewById(R.id.lastName);
         buttonAddData = (Button) findViewById(R.id.addButton);
@@ -45,7 +61,6 @@ public class activityDatabaseRecord extends AppCompatActivity {
         goBackFromDatabaseButton = (Button) findViewById(R.id.goBackDatabase);
         AddData();
         viewAllData();
-
 
         goBackFromDatabaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +70,10 @@ public class activityDatabaseRecord extends AppCompatActivity {
         });
     }
 
+    /**
+     * Sets up the OnClickListener for the "Add Data" button.
+     * Inserts the entered data into the database when clicked.
+     */
     public void AddData(){
         buttonAddData.setOnClickListener(
                 new View.OnClickListener() {
@@ -67,7 +86,6 @@ public class activityDatabaseRecord extends AppCompatActivity {
                                 totalPrice,
                                 foodPrice
                         );
-
                         if(isInserted ==true)
                         {
                             Toast.makeText(activityDatabaseRecord.this,getString(R.string.toastInsertData),Toast.LENGTH_LONG).show();
@@ -81,6 +99,10 @@ public class activityDatabaseRecord extends AppCompatActivity {
         );
     }
 
+    /**
+     * Sets up the OnClickListener for the "View All Data" button.
+     * Retrieves all data from the database and displays it.
+     */
     public  void viewAllData() {
         viewAllDataButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -112,7 +134,13 @@ public class activityDatabaseRecord extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Displays a message dialog with the specified title and message.
+     * @param title The title of the message dialog
+     * @param message The message to be displayed in the dialog
+     */
     public void showMessage(String title, String message){
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         View dialogView = getLayoutInflater().inflate(R.layout.custom_dialogue, null);
@@ -133,10 +161,6 @@ public class activityDatabaseRecord extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
-
         dialog.show();
     }
-
-
 }

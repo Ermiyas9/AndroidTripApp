@@ -1,3 +1,15 @@
+/** ===============================================================================================*/
+/** FILE               : displayDownloadedFile.java                                                */
+/** PROJECT            : Trip Planner App (Assignment 2)                                           */
+/** PROGRAMMER         : Ermiyas (Endalkachew) Gulti                                               */
+/** FIRST VERSION      : 2024-March-14                                                             */
+/** DESCRIPTION        : displayDownloadedFile.java is an activity class that displays the downloaded*/
+/**                      file content on the screen. It retrieves the file content from the intent  */
+/**                      and sets it to a TextView for display. The class also handles the back     */
+/**                      button click event to finish the activity and return to the previous screen*/
+/**=================================================================================================*/
+
+
 package com.example.tripplannerapp;
 
 import android.content.Intent;

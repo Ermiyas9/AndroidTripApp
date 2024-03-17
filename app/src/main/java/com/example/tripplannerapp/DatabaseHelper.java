@@ -1,3 +1,14 @@
+/** ================================================================================================*/
+/** FILE               : DatabaseHelper.java                                                        */
+/** PROJECT            : Trip Planner App (Assignment 2)                                            */
+/** PROGRAMMER         : Ermiyas (Endalkachew) Gulti                                                */
+/** FIRST VERSION      : 2024-March-14                                                              */
+/** DESCRIPTION        : DatabaseHelper.java is a helper class for managing the SQLite database     */
+/**                      used in the Trip Planner app. It handles database creation, table creation,*/
+/**                      insertion of data, and retrieval of data operations.                       */
+/**=================================================================================================*/
+
+
 package com.example.tripplannerapp;
 
 import android.content.ContentValues;
@@ -18,8 +29,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static  final String TRAVEL_DESTINATION = "Travel Destination";
     public static  final String TRAVEL_EXPENSE = "Travel Expense";
     public static  final String MEAL_COST= "Meal Cost";
-
-
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -42,12 +51,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "MEAL_COST REAL)");
     }
 
-
+    /**
+     * Called when the database needs to be upgraded. This method will drop the existing table
+     * and recreate a new one. You can alter your table schema here.
+     *
+     * @param db         The database.
+     * @param oldVersion The old database version.
+     * @param newVersion The new database version.
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
     }
 
+    /**
+     * Inserts data into the database.
+     *
+     * @param firstName   The first name of the user.
+     * @param lastName    The last name of the user.
+     * @param destination The travel destination.
+     * @param totalPrice  The total travel expense.
+     * @param foodPrice   The meal cost.
+     * @return true if the data is inserted successfully, otherwise false.
+     */
     public boolean insertData(String firstName, String lastName, String destination, String totalPrice, String foodPrice){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -73,6 +99,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Retrieves all data from the database.
+     *
+     * @return A Cursor object containing all the data.
+     */
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor result = db.rawQuery("select * from "+TABLE_NAME,null);

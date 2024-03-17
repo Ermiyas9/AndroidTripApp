@@ -1,5 +1,16 @@
+/** ===============================================================================================*/
+/** FILE               : myViewHolder.java                                                         */
+/** PROJECT            : Trip Planner App (Assignment 2)                                           */
+/** PROGRAMMER         : Ermiyas (Endalkachew) Gulti                                               */
+/** FIRST VERSION      : 2024-March-14                                                             */
+/** DESCRIPTION        : This file contains the implementation of the ViewHolder used in the Trip  */
+/**                   : Planner app's RecyclerView adapter.The ViewHolder holds references to the  */
+/**                   : views representing individual items in the RecyclerView.                   */
+/**================================================================================================*/
+
 package com.example.tripplannerapp;
 
+// imports
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -7,7 +18,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 public class myViewHolder extends RecyclerView.ViewHolder{
-
     ImageView foodImageView;
     TextView preparationTimeTextView;
     TextView foodNameTextView;
@@ -15,6 +25,9 @@ public class myViewHolder extends RecyclerView.ViewHolder{
     TextView foodPriceTextView;
     TextView foodDescriptionTextView;
 
+    /**
+     * ViewHolder class for holding references to views representing individual items in the RecyclerView.
+     */
     public myViewHolder(@NonNull View itemView,  RecyclerViewInterface  recyclerViewInterface){
         super(itemView);
 
@@ -25,6 +38,12 @@ public class myViewHolder extends RecyclerView.ViewHolder{
         foodPriceTextView = itemView.findViewById(R.id.foodPrice);
         foodDescriptionTextView = itemView.findViewById(R.id.foodDescription);
 
+        /**
+         * Constructor for myViewHolder.
+         *
+         * @param itemView               The View object representing the layout of an individual item in the RecyclerView.
+         * @param recyclerViewInterface The interface for handling RecyclerView item clicks.
+         */
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,5 +58,4 @@ public class myViewHolder extends RecyclerView.ViewHolder{
             }
         });
     }
-
 }

@@ -1,6 +1,7 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/teal_200">
 
@@ -63,15 +64,14 @@
             android:layout_height="wrap_content"/>
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@id/foodImage"
             android:layout_marginTop="10dp"
             android:background="@color/teal_200"/>
-</RelativeLayout>
 
     <!-- Button for going back -->
-
     <Button
         android:id="@+id/backButton"
         style="@style/button_style"
@@ -82,6 +82,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginBottom="50dp"
         android:onClick="goBack"
+        android:layout_below="@+id/linearLayout"
         android:text="Back" />
 
     <Button
@@ -97,6 +98,8 @@
         android:onClick="DownLoadFiles"
         android:text="DownLoad Files" />
 </RelativeLayout>
+
+</ScrollView>
 
 
 
