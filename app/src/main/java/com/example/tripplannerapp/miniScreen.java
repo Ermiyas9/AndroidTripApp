@@ -27,6 +27,8 @@ public class miniScreen extends AppCompatActivity {
 
     // Name of the file to save the downloaded content
     private static final String FILENAME = "downloadedFile.txt";
+
+    double foodPrice;
     @Override
     protected void onCreate(Bundle savedInstanceState){
 
@@ -40,7 +42,7 @@ public class miniScreen extends AppCompatActivity {
 
         String foodName = getIntent().getStringExtra("foodName");
         String mealCategory = getIntent().getStringExtra("mealCategories");
-        double foodPrice = getIntent().getDoubleExtra("foodPrice", 0.0);
+        foodPrice = getIntent().getDoubleExtra("foodPrice", 0.0);
         String foodDescription = getIntent().getStringExtra("foodDescription");
         int foodImage = getIntent().getIntExtra("foodImage", 0);
         double preparationTime = getIntent().getDoubleExtra("preparationTimeMinutes", 0.0);
@@ -66,6 +68,13 @@ public class miniScreen extends AppCompatActivity {
             public void onClick(View v) {
                 // Execute the DownloadFileTask when the download button is clicked
                 new DownloadFileTask().execute("https://filesamples.com/samples/document/txt/sample3.txt");
+
+
+                // Create an intent to start the second database activity
+                Intent intent2 = new Intent(miniScreen.this, activityDatabaseRecord.class);
+
+                // Put extras (destination and total cost) to the intent for the second activity
+                intent2.putExtra("foodPrice", foodPrice);
             }
         });
     }

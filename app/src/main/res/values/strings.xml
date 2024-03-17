@@ -9,8 +9,8 @@
     <string name="new_york">New York</string>
     <string name="new_york_highway">New York City</string>
     <string name="tokyo">Tokyo</string>
-    <string name="price">$1850/night</string>
-    <string name="tokyo_price">$1540/night</string>
+    <string name="price">$150/night</string>
+    <string name="tokyo_price">$140/night</string>
     <string name="textview_homepage">Plan your trip, \n pack your bags, and let\'s go!</string>
     <string name="get_started_btn">Get Started</string>
     <string name="lake_pic_descr">Picture Of Lake </string>
@@ -49,7 +49,7 @@
     <string name="PREV">PREV</string>
     <string name="start_date">Start Date:</string>
     <string name="enterExtra5">Enter your text here</string>
-    <string name="price1">$1600/night</string>
+    <string name="price1">$160/night</string>
     <string name="review_fare">Review Fare</string>
     <string name="manchesterEngland">Manchester,England</string>
     <string name="newYorkCity">New York City</string>

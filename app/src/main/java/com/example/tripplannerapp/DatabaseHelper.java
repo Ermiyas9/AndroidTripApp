@@ -48,12 +48,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
     }
 
-    public boolean insertData(String firstName,String lastName){
+    public boolean insertData(String firstName, String lastName, String destination, String totalPrice, String foodPrice){
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("FIRST_NAME",firstName);
         contentValues.put("LAST_NAME",lastName);
+        contentValues.put("TRAVEL_DESTINATION", destination);
+        contentValues.put("TRAVEL_EXPENSE", totalPrice);
+        contentValues.put("MEAL_COST", foodPrice);
+
 
         long insetDetectorFlag= db.insert(TABLE_NAME,null,contentValues);
 

@@ -153,7 +153,7 @@ public class activitySecondPage extends AppCompatActivity {
 
 
             // If checked, set the value of id number
-            selectedRadioValue = 1850;
+            selectedRadioValue = 150;
             // Add values to the Bundle
             bundle.putInt("price", selectedRadioValue);
             bundle.putString("destination", "Manchester England");
@@ -168,7 +168,7 @@ public class activitySecondPage extends AppCompatActivity {
             RadioBtnNewYork.setChecked(false);
 
             // If checked, set the value of id number
-            selectedRadioValue = 1540;
+            selectedRadioValue = 140;
             // Add values to the Bundle
             bundle.putInt("price", selectedRadioValue);
             bundle.putString("destination", "Japan Tokyo");
@@ -183,7 +183,7 @@ public class activitySecondPage extends AppCompatActivity {
             RadioBtnTokyo.setChecked(false);
 
             // If checked, set the value of id number
-            selectedRadioValue = 1600;
+            selectedRadioValue = 160;
             // Add values to the Bundle
             bundle.putInt("price", selectedRadioValue);
             bundle.putString("destination", "New York City");

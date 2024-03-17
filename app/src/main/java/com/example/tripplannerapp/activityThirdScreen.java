@@ -47,6 +47,8 @@ public class activityThirdScreen extends AppCompatActivity {
     String checkOutDateString;
     Switch reviewSwitch;
 
+    long totalPrice;
+
     @SuppressLint("SetTextI18n")
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -107,7 +109,7 @@ public class activityThirdScreen extends AppCompatActivity {
                         if (checkOutDate.after(currentDate)) {
 
                             // to calculate user trip fare
-                            long totalPrice = calculateTotalPrice(checkInDate, checkOutDate, numberOfPersons, pricePerNight);
+                            totalPrice = calculateTotalPrice(checkInDate, checkOutDate, numberOfPersons, pricePerNight);
                             totalPriceTextView.setText("Total Price: " + totalPrice);
                         } else {
                             Toast.makeText(this, "Please enter a date in the future", Toast.LENGTH_SHORT).show();
@@ -131,7 +133,18 @@ public class activityThirdScreen extends AppCompatActivity {
 
                 // to redirect the next page
                 Intent intent = new Intent(this, activityFourthScreen.class);
+
                 startActivity(intent);
+
+                // Create an intent to start the second database activity
+                Intent intent2 = new Intent(activityThirdScreen.this, activityDatabaseRecord.class);
+
+                // Put extras (destination and total cost) to the intent for the second activity
+                intent2.putExtra("destination", destination);
+                intent2.putExtra("totalPrice", totalPrice);
+
+                // Start the second database activity
+                startActivity(intent2);
             }
             else {
                 Toast.makeText(this, "Please Make sure to check your fare before confirm.", Toast.LENGTH_SHORT).show();
