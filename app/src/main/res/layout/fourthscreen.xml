@@ -22,13 +22,13 @@
         android:id="@+id/imageView3"
         android:layout_width="393dp"
         android:layout_height="282dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="84dp"
         android:importantForAccessibility="no"
         android:scaleType="centerCrop"
         android:scaleX="1"
         android:scaleY="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/miami_beach" />
@@ -37,7 +37,7 @@
         android:id="@+id/ratingBar"
         android:layout_width="267dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="20dp"
         android:elevation="2dp"
         android:theme="@style/CustomRatingBar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
         style="@style/BlueTextStyle"
         android:layout_width="368dp"
         android:layout_height="72dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/please_rate_your_experience_with_us"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,21 +61,33 @@
         style="@style/BlueTextStyle"
         android:layout_width="389dp"
         android:layout_height="42dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:text="@string/enjoy_your_trip"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
         android:id="@+id/foodMenuButton"
         style="@style/button_style"
         android:layout_width="159dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="236dp"
         android:text="@string/food_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/databaseButton"
+        style="@style/button_style"
+        android:layout_width="159dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:text="Check Database "
+        android:onClick="databaseButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 

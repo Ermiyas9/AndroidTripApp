@@ -58,11 +58,24 @@ public class  activityFourthScreen extends AppCompatActivity {
         // Find the button
         Button button = findViewById(R.id.foodMenuButton);
 
+        // Find the button
+        Button database_button = findViewById(R.id.databaseButton);
+
         // Set a click listener for the button
         button.setOnClickListener(view -> {
 
             // Create an intent to start the desired activity
             Intent intent = new Intent(activityFourthScreen.this, foodMenuRecycleView.class);
+
+            // Start the activity
+            startActivity(intent);
+        });
+
+        // Set a click listener for the button
+        database_button.setOnClickListener(view -> {
+
+            // Create an intent to start the desired activity
+            Intent intent = new Intent(activityFourthScreen.this, activityDatabaseRecord.class);
 
             // Start the activity
             startActivity(intent);

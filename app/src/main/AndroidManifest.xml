@@ -59,6 +59,12 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat" />
 
+        <activity
+            android:name=".activityDatabaseRecord"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat" />
+
 
     </application>
 

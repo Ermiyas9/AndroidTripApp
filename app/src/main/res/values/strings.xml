@@ -62,4 +62,5 @@
     <string name="arabicFoodDescription">Halloumi is a semi-hard, brined cheese with a high melting point, often grilled or fried, while falafel consists of fried balls or patties made from ground chickpeas or fava beans, typically served in pita bread with various accompaniments</string>
     <string name="dorowet">Doro Wot is a traditional Ethiopian stew made with chicken simmered in a spicy berbere sauce, flavored with onions, garlic, ginger, and other Ethiopian spices, creating a rich and aromatic dish often served with injera, a sourdough flatbread, making it a staple of Ethiopian cuisine.</string>
     <string name="mexicanFoodDescription">Mexican food is conformed of a series of delicious dishes and is recognized for its distinctive flavors, has an extensive variety of recipes that have been passed from generation to generation and today constitute a great gastronomic attraction.</string>
+    <string name="toastInsertData">You have succesfully inserted a data into the database</string>
 </resources>

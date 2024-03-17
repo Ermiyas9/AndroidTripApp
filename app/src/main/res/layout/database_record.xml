@@ -1,0 +1,38 @@
+<!-- activity_database_interaction.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:padding="16dp">
+
+    <!-- EditText for First Name -->
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <!-- EditText for Last Name -->
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstName"
+        android:layout_marginTop="16dp"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/addButton"
+        style="@style/button_style"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="343dp"
+        android:text="Add Button" />
+
+
+</RelativeLayout>

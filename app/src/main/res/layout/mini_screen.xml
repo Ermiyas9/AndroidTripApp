@@ -91,8 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="49dp"
         android:layout_toEndOf="@id/backButton"
         android:onClick="DownLoadFiles"
         android:text="DownLoad Files" />
