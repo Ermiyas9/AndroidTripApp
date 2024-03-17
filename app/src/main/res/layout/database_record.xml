@@ -26,13 +26,42 @@
     <Button
         android:id="@+id/addButton"
         style="@style/button_style"
-        android:layout_width="134dp"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lastName"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginBottom="343dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="377dp"
+        android:layout_toStartOf="@+id/viewDatabase"
         android:text="Add Button" />
+
+
+    <Button
+        android:id="@+id/viewDatabase"
+        style="@style/button_style"
+        android:layout_width="137dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/lastName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="379dp"
+        android:text="View All" />
+
+    <Button
+        android:id="@+id/goBackDatabase"
+        style="@style/button_style"
+        android:layout_width="104dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/lastName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="257dp"
+        android:text="Go Back" />
 
 
 </RelativeLayout>
